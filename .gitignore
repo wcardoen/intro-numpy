@@ -1,0 +1,7 @@
+# Ignore the following files
+*.bbl
+*.dvi
+*.aux
+*.log
+*.out
+.ipynb_checkpoints
