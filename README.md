@@ -1,8 +1,8 @@
-# numpy-rmacc2020
-  Hands-on Introduction to Numpy/Scipy
+# numpy-pearc20
+  Hands-on Introduction to Numpy
 
-  Presented at the 10th Annual RMACC HPC Symposium
+  Presented at PEARC20
 
-  May 20-21, 2020
+  July 27-31, 2020 
 
-  University of Colorado, Boulder
+  Virtual Conference
