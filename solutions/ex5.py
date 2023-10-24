@@ -51,7 +51,7 @@ def calc_sn(n):
 N = 100
 k = np.arange(1,N+1)
 Sk = calc_sn(N)
-plt.xlabel("$n$")
-plt.ylabel("$S_n$")
-plt.title("Convergence of the Partial Sum $S_n$")
+plt.xlabel(r"$n$")
+plt.ylabel(r"$S_n$",rotation=0)
+plt.title("$ S_n = \sum_{k=1}^n \frac{sin(k)}{k^2} $")
 plt.plot(k,Sk);
