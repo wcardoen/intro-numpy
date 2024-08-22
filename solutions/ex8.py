@@ -27,9 +27,31 @@ print(f"  Matrix exponential of A:\n{res}")
 print(f"  Matrix exponential of A (using scipy):\n{sla.expm(A)}")      
 
 
-
 print(f"Exercise 8.2::")
+# 1.Set lambda to 2.0
+lmbda = 2.0
 
+# 2.Calc. random number from exp. distro using the Unif. distribution 
+# and transform them.
+N = 10**7
+rng = rnd.default_rng()
+y = rng.random(N)
+x1 = -1.0/lmbda*np.log(1-y)
+
+# 3.Calc. random number directly using the Exp. distribution
+SCALE = 1.0/lmbda
+x2 = rng.exponential(scale=SCALE, size=N)
+
+# 4.Create the histogram
+fig, axes = plt.subplots(2,1)
+axes[0].hist(x1)
+axes[0].set_title(r"$Exp(x;\lambda=2.0)$ using Unif. distr.") 
+axes[1].hist(x2)
+axes[1].set_title(f"Generated using exponential distr. directly")
+plt.show()
+
+
+print(f"Exercise 8.3::")
 # Step 1: Generate equidistant intervals in ]0,1]
 dx = 0.01
 N = int(1.0/dx)
@@ -51,10 +73,11 @@ print(f"  A@A.T:\n{A @ A.T}\n")
 
 # Step 4: Calculate the Brownian paths
 #         with X[0]=0
+rng = rnd.default_rng()
 NSIM = 10
 res = np.zeros((NSIM,N+1))
 for isim in range(NSIM):
-    Z = rnd.normal(loc=0.0, scale=1.0, size=x.shape[0])
+    Z = rng.normal(loc=0.0, scale=1.0, size=x.shape[0])
     X = np.squeeze(A @ Z[:,np.newaxis])
     print(X)
     res[isim,1:] = X

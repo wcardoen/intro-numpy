@@ -19,7 +19,8 @@ print(f"  y:\n{y}\n")
 
 
 print(f"  5.2:")
-A = rnd.random((5,10))
+rng = rnd.default_rng()
+A = rng.random((5,10))
 print(f"  A:\n{A}\n")
 
 max_val = A.max()
@@ -53,5 +54,5 @@ k = np.arange(1,N+1)
 Sk = calc_sn(N)
 plt.xlabel(r"$n$")
 plt.ylabel(r"$S_n$",rotation=0)
-plt.title("$ S_n = \sum_{k=1}^n \frac{sin(k)}{k^2} $")
+plt.title(r"$ S_n = \sum_{k=1}^n \frac{sin(k)}{k^2} $")
 plt.plot(k,Sk);

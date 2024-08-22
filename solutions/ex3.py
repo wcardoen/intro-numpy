@@ -6,7 +6,6 @@ print(f"  3.1:")
 A = np.arange(1,31).reshape(5,6)
 print(f"  A:\n{A}\n")
 
-
 B=A[:,:4:2]
 print(f"  B:\n{B}\n")
 
@@ -22,7 +21,8 @@ E=A[0::3,1::3]
 print(f"  E:\n{E}\n")
 
 print(f"\n  3.2:")
-X = rnd.random((7,7))
+rng = rnd.default_rng()
+X = rng.random((7,7))
 X[2:5,2:5]=0.0
 print(f"  X:\n{X}\n")
 

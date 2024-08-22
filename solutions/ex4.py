@@ -16,8 +16,9 @@ print(f"  z:\n{z}\n")
 
 print(f"  4.2:")
 np.set_printoptions(precision=4)  # To make matrices more readable
-X = np.random.random(9)
-Y = np.random.random(6)
+rng = rnd.default_rng()
+X = rng.random(9)
+Y = rng.random(6)
 print(f"  X:{X}\n")
 print(f"  Y:{Y}\n")
 

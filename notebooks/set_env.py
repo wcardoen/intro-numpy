@@ -1,8 +1,8 @@
 import numpy as np
-import numpy.fft as ff
-import numpy.linalg as la
-import numpy.polynomial as poly
 import numpy.random as rnd
+import numpy.linalg as nla
+import numpy.fft as nfft
+import numpy.polynomial as poly
 import matplotlib
 import matplotlib.pyplot as plt
 print(f"Check versions:")

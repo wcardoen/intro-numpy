@@ -9,8 +9,9 @@ print(f"  6.1:")
 SZ = 10
 
 # Generate random numbers within [0,1(
-x = rnd.random(SZ)
-y = rnd.random(SZ)
+rng = rnd.default_rng()
+x = rng.random(SZ)
+y = rng.random(SZ)
 
 # Map them into a square
 x = 2.0*x -1.0
@@ -45,7 +46,8 @@ print(f"      y:\n{y}\n\n")
 
 print(f"  6.2:")
 # Generate the Random Values
-x = rnd.random((6,8))
+rng = rnd.default_rng()
+x = rng.random((6,8))
 print(f"  x:\n{x}\n")
 
 # Calc. |x_ij - 0.5|
