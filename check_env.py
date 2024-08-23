@@ -2,8 +2,8 @@ import importlib
 import sys
 
 __author__ = "Wim R.M. Cardoen"
-__version__ = "2020"
-# Last update: 05/19/2020
+__version__ = "2024"
+# Last update: 08/22/2024
 
 # Dictionary with the comparaison operators
 dictCmp={"==": '__eq__',
@@ -57,13 +57,13 @@ if __name__ == "__main__":
 
     # --- Start Requirements SPECIFIC for the NumPy/SciPy tutorial
     #     which means:
-    #       numpy>=1.12.0
-    #       scipy>=0.19.0
-    #       matplotlib>=1.5.0
-    #       notebook>=4.2.0 
-    REQUIRED_PKG = ['numpy','scipy','matplotlib','notebook']
+    #       numpy>=2.0.0
+    #       scipy>=1.14.0
+    #       matplotlib>=3.9.0
+    #       jupyterlab>=4.2.0 
+    REQUIRED_PKG = ['numpy','scipy','matplotlib','jupyterlab']
     CMP_OP = ['>=', '>=','>=','>=']
-    REQUIRED_VERSION = ['1.12.0','0.19.0','1.5.0','4.2.0']
+    REQUIRED_VERSION = ['2.0.0','1.14.0','3.9.0','4.2.0']
     # --- End of the Tutorial Requirements 
 
 
